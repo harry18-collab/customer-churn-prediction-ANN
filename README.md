@@ -1,72 +1,114 @@
-Customer Churn Prediction using ANN
+#Customer Churn Prediction using ANN
 
-A deep learning project that predicts whether a bank customer will churn (leave the bank) using an Artificial Neural Network (ANN) built with TensorFlow/Keras. The project includes a Streamlit web app for real-time predictions.
+A deep learning project that predicts whether a bank customer will churn (leave the bank) using an Artificial Neural Network (ANN) built with TensorFlow/Keras.
+The project also includes a Streamlit web app for real-time predictions.
 
-Project Overview
-Customer churn prediction helps banks identify customers who are likely to leave. By predicting churn early, banks can take proactive steps to retain valuable customers.
+---
 
-Tech Stack
+##Project Overview
 
-Python 3.11
-TensorFlow / Keras — ANN model
-Scikit-learn — preprocessing (LabelEncoder, OneHotEncoder, StandardScaler)
-Pandas / NumPy — data manipulation
-Streamlit — web app
-Pickle — saving/loading encoders and scaler
+Customer churn prediction helps banks identify customers who are likely to leave.
+By predicting churn early, banks can take proactive steps to retain valuable customers.
 
+---
 
-Project Structure
+##Tech Stack
+
+* **Python 3.11**
+* **TensorFlow / Keras** — ANN model
+* **Scikit-learn** — preprocessing
+* **Pandas / NumPy** — data manipulation
+* **Streamlit** — web app
+* **Pickle** — saving encoders and scaler
+
+---
+
+##Project Structure
+
+```
 customer-churn-prediction-ANN/
 │
-├── app.py                        # Streamlit web app
-├── experiments.ipynb             # Model training notebook
-├── model.h5                      # Trained ANN model
-├── Label_encoder_gender.pkl      # Saved LabelEncoder for Gender
-├── OneHotEncoder_geo.pkl         # Saved OneHotEncoder for Geography
-├── StandardScaler.pkl            # Saved StandardScaler
-├── requirements.txt              # Project dependencies
-├── runtime.txt                   # Python version for deployment
+├── app.py
+├── experiments.ipynb
+├── model.h5
+├── Label_encoder_gender.pkl
+├── OneHotEncoder_geo.pkl
+├── StandardScaler.pkl
+├── requirements.txt
+├── runtime.txt
 └── README.md
+```
 
-Model Architecture
-LayerNeuronsActivationInput + Hidden Layer 164ReLUHidden Layer 232ReLUOutput Layer1Sigmoid
+---
 
-Optimizer: Adam (learning rate = 0.01)
-Loss Function: Binary Crossentropy
-Metrics: Accuracy
+##Model Architecture
 
+* **Input Layer + Hidden Layer 1** → 64 neurons (ReLU)
 
-Features Used
-FeatureDescriptionCreditScoreCustomer's credit scoreGeographyCountry (France, Germany, Spain)GenderMale / FemaleAgeCustomer's ageTenureYears with the bankBalanceAccount balanceNumOfProductsNumber of bank products usedHasCrCardHas credit card (0/1)IsActiveMemberIs active member (0/1)EstimatedSalaryEstimated annual salary
+* **Hidden Layer 2** → 32 neurons (ReLU)
 
-How to Run Locally
+* **Output Layer** → 1 neuron (Sigmoid)
 
-Clone the repository
+* **Optimizer:** Adam (learning rate = 0.01)
 
-bashgit clone https://github.com/harry18-collab/customer-churn-prediction-ANN.git
+* **Loss Function:** Binary Crossentropy
+
+* **Metrics:** Accuracy
+
+---
+
+##Features Used
+
+* CreditScore
+* Geography
+* Gender
+* Age
+* Tenure
+* Balance
+* NumOfProducts
+* HasCrCard
+* IsActiveMember
+* EstimatedSalary
+
+---
+
+##How to Run Locally
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/harry18-collab/customer-churn-prediction-ANN.git
 cd customer-churn-prediction-ANN
+```
 
-Install dependencies
+### 2. Install dependencies
 
-bashpip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
-Run the Streamlit app
+### 3. Run the Streamlit app
 
-bashstreamlit run app.py
+```
+streamlit run app.py
+```
 
-How It Works
+---
 
-User inputs customer details in the web app
-Gender is encoded using LabelEncoder
-Geography is encoded using OneHotEncoder
-All features are scaled using StandardScaler
-The ANN model predicts churn probability
-If probability > 0.5 → Customer likely to churn
+##How It Works
 
+1. User inputs customer details in the web app
+2. Gender → LabelEncoder
+3. Geography → OneHotEncoder
+4. Features → StandardScaler
+5. Model predicts churn probability
+6. If probability > 0.5 → Customer likely to churn
 
-Results
-The model achieves good accuracy on the test set and is monitored using TensorBoard during training.
+---
 
-Author
-harry18-collab
-GitHub
+##Results
+
+* Achieves good accuracy on test data
+* Model training monitored using TensorBoard
+
+---
