@@ -1,4 +1,4 @@
-Readme · MDCopyCustomer Churn Prediction using ANN
+Customer Churn Prediction using ANN
 A deep learning project that predicts whether a bank customer will churn (leave the bank) using an Artificial Neural Network (ANN) built with TensorFlow/Keras. The project includes a Streamlit web app for real-time predictions.
 
 Project Overview
