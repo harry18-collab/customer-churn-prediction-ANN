@@ -1,18 +1,18 @@
-#Customer Churn Prediction using ANN
+Customer Churn Prediction using ANN
 
 A deep learning project that predicts whether a bank customer will churn (leave the bank) using an Artificial Neural Network (ANN) built with TensorFlow/Keras.
 The project also includes a Streamlit web app for real-time predictions.
 
 ---
 
-##Project Overview
+Project Overview
 
 Customer churn prediction helps banks identify customers who are likely to leave.
 By predicting churn early, banks can take proactive steps to retain valuable customers.
 
 ---
 
-##Tech Stack
+Tech Stack
 
 * **Python 3.11**
 * **TensorFlow / Keras** — ANN model
@@ -23,7 +23,7 @@ By predicting churn early, banks can take proactive steps to retain valuable cus
 
 ---
 
-##Project Structure
+Project Structure
 
 ```
 customer-churn-prediction-ANN/
@@ -41,7 +41,7 @@ customer-churn-prediction-ANN/
 
 ---
 
-##Model Architecture
+Model Architecture
 
 * **Input Layer + Hidden Layer 1** → 64 neurons (ReLU)
 
@@ -57,7 +57,7 @@ customer-churn-prediction-ANN/
 
 ---
 
-##Features Used
+Features Used
 
 * CreditScore
 * Geography
@@ -72,7 +72,7 @@ customer-churn-prediction-ANN/
 
 ---
 
-##How to Run Locally
+How to Run Locally
 
 ### 1. Clone the repository
 
@@ -95,7 +95,7 @@ streamlit run app.py
 
 ---
 
-##How It Works
+How It Works
 
 1. User inputs customer details in the web app
 2. Gender → LabelEncoder
@@ -106,7 +106,7 @@ streamlit run app.py
 
 ---
 
-##Results
+Results
 
 * Achieves good accuracy on test data
 * Model training monitored using TensorBoard
